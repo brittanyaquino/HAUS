@@ -1,0 +1,201 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling for header */
+.logo img {
+    height: 50px;
+    width: auto;
+    margin: 50px 0 0 120px;
+
+}
+
+button {
+    background: none;
+    border: 1.2px solid #000;
+    border-radius: 9px;
+    padding: .5px 18px;
+    margin-top: 50px;
+    margin-right: 50px;
+    
+}
+
+button a:link {
+    text-decoration: none;
+    color: #000;
+}
+
+button a:visited {
+    text-decoration: none;
+    color: #000;
+}
+
+button a:hover {
+    color: #d4af37;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background: #ffffff;
+    padding-bottom: 30px;
+}
+
+/* Styling for menu */
+
+#menu > a {
+    text-decoration: none ;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+#menu > a:hover {
+    color: #d4af37;
+}
+
+
+#menuToggle {
+    display: block;
+    position: relative;
+    top: 50px;
+    left: 50px;
+    z-index: 1; 
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+    -webkit-touch-callout: none;
+}
+#menuToggle ul {
+    height: 630px;
+}
+
+#menuToggle li {
+    margin-top: 10px;
+}
+
+#menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-top: 5px;
+    position: relative;
+
+    background: #181818;
+    border-radius: 3px;
+
+    z-index: 1;
+
+    transform-origin: 4px 0px;
+
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), 
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+
+}
+
+#menuToggle span:first-child {
+    transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+
+/* Crossmark Time */
+#menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+    /* Shouldnt I be calling out the 2nd span instead of the 3rd? */
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+/* Making it absolute position at top of the screen */
+#menu {
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    background: #434343d4;
+    list-style-type: none;
+
+    -webkit-font-smoothing: antialiased;
+    /* Stop safari flickering */
+
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+
+}
+
+#menu li {
+    padding: 10px 0;
+    font-size: 22px;
+}
+
+#menuToggle input:checked ~ ul {
+    transform: none;
+}
+
+/* Problems I am facing: when the page is reloaded the menu pops up and when I click an item on the menu then the words turn purple?! https://codepen.io/erikterwan/pen/EVzeRP */
+
+/* Main styling */
+
+#main-image h1 {
+    text-align: center;
+    background-image: url("images/kitchen2.jpeg");
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    height: 550px;
+    line-height: 400px;
+    margin: 0px;
+    font-size: 3em;
+    /* text-shadow: 0 0 3px #212121;  */
+    font-weight: 600;
+}
+
+.scroll {
+    width: 200px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.scroll img {
+    width: 30px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.scroll-box p {
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
