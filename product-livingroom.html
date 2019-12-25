@@ -1,0 +1,118 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>Living Room</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Cormorant:700&display=swap" rel="stylesheet">
+        <style>
+            #menu {
+                display: none;
+            }
+            
+            /* Main styling */
+            main {
+                margin-top: 139px;
+            }
+            #main-image {
+                background-image: url("images/green-about.jpeg");
+                background-size: cover;
+                background-position: center;
+                height: 400px;
+            }
+
+            #main-image h1 {
+                text-align: center;
+                color: #fff;
+                margin: 0px;
+                font-size: 3em;
+                /* text-shadow: 0 0 3px #212121;  */
+                font-weight: 600;
+                text-align: left;
+            }
+            /* Styling for the products menu */
+            #nav #active {
+                color: #d4af37;
+                border-bottom: 2px solid #d4af37;
+            }
+            #navbar {
+                box-shadow: 0px 2px 5px #ccc;
+                margin-bottom: 20px;
+            }
+            #nav {
+                width: 600px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            #nav a {
+                color: #000;
+                text-decoration: none;
+                width: 200px;
+                height: 50px;
+                line-height: 50px;
+                display: block;
+                float: left;
+                text-align: center;
+                border-bottom: 2px solid #fff;
+            }
+            #nav a:hover {
+                color: #d4af37;
+                border-bottom: 2px solid #d4af37;
+            }
+
+        </style>
+    </head> 
+
+    <body>
+        <header>
+            <nav role="navigation"> <!--so i'm not sure how role is being applied here-->
+                <div id="menuToggle">
+                    <input type="checkbox" />
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                    <ul id="menu">
+                        <a href="index.html"><li>Home</li></a>
+                        <a href="product-livingroom.html"><li>Products</li></a> <!--add menu on top to click through the multiple pages--->
+                        <a href="about.html"><li>About</li></a>
+                        <a href="contact.html"><li>Contact</li></a>
+
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="logo">
+                <img src="images/itp-logo.png" alt="logo">
+            </div>
+
+            <div class="etsy">
+                <button>
+                    <p><a href="https://www.etsy.com/shop/ArtisanBornCreations?ref=simple-shop-header-name&listing_id=693794367&ga_search_query=modern%20furniture">SHOP ETSY</a></p>
+                </button>
+            </div>
+            </header>
+
+            <main>
+                <div id="main-image">
+                        <h1 id="find">FIND YOUR INSPIRATION</h1>
+                        <h1>AND BRING IT HOME</h1>
+                    </div>
+                </div>
+            </main>
+
+            <div id="navbar">
+                <div id="nav">
+                    <a id="active" href="product-livingroom.html">Living Room</a>
+                    <a href="product-bedroom.html">Bedroom</a>
+                    <a href="product-diningroom.html">Dining Room</a>
+
+                    <div class="clearfloat"></div>
+                </div>
+            </div>
+
+
+    </body>
+
+
+</html>
