@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>HAUS</title>
         <link rel="stylesheet" type="text/css" href="styles.css">
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Cormorant:700&display=swap" rel="stylesheet">
+        <meta charset="utf-8">
+        <meta name="keywords" content="HAUS, HTML5, CSS3, Web Publishing, ITP104, Interior Design, Custom Furniture">
+        <meta name="description" content="We an interior design team with a passion for beautiful, handcrafted furniture.">
         <style>
             #menu {
                 display: none;
@@ -65,6 +68,7 @@
                 width: 1200px;
                 margin-left: auto;
                 margin-right: auto;
+                margin-bottom: 80px;
                 justify-content: space-between;
             }
             .box1 {
@@ -187,12 +191,40 @@
                 height: auto;
                 box-shadow: 60px -16px #008080;
             }
+            .btn {
+                width: 100px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            a.product-btn  {
+                margin-top: 50px;
+                padding: 10px 18px;
+                border: 1.2px solid #000;
+                border-radius: 9px;
+                text-decoration: none;
+                font-size: .8em;
+                text-align: center;
+            }
+
+            a.product-btn:link {
+                text-decoration: none;
+                color: #000;
+            }
+            a.product-btn:visited {
+                text-decoration: none;
+                color: #000;
+            }
+            a.product-btn:hover {
+                color: #d4af37;
+            }
+
+
         </style>
 
     </head>
     <body>
         <header>
-            <nav role="navigation"> <!--so i'm not sure how role is being applied here-->
+            <nav> 
                 <div id="menuToggle">
                     <input type="checkbox" />
                     <span></span>
@@ -200,24 +232,20 @@
                     <span></span>
 
                     <ul id="menu">
-                        <a href="index.html"><li>Home</li></a>
-                        <a href="product-livingroom.html"><li>Products</li></a> <!--add menu on top to click through the multiple pages--->
-                        <a href="about.html"><li>About</li></a>
-                        <a href="contact.html"><li>Contact</li></a>
-
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product-livingroom.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
             </nav>
 
             <div class="logo">
-                <img src="images/itp-logo.png" alt="logo">
+                <a href="index.html"><img src="images/itp-logo.png" alt="logo"></a>
             </div>
 
             <div class="etsy">
-                <button>
-                    <p><a href="https://www.etsy.com/shop/ArtisanBornCreations?ref=simple-shop-header-name&listing_id=693794367&ga_search_query=modern%20furniture">SHOP ETSY</a></p>
-                </button>
-
+                    <a class="etsy-btn" target="_blank" href="https://www.etsy.com/shop/ArtisanBornCreations?ref=simple-shop-header-name&listing_id=693794367&ga_search_query=modern%20furniture">SHOP ETSY</a>
             </div>
         </header>
 
@@ -225,7 +253,6 @@
             <div id="main-image">
                     <h1 id="find">Find Your Inspiration</h1>
                     <h1>& Bring it Home</h1>
-                </div>
             </div>
             
             <div class="scroll-box"> 
@@ -237,28 +264,37 @@
 
             <!-- Product Section -->
             <div id="product-section">
-                <div class="box1"> <!--ADD FLEX or FLOAT-->
-                    <div class="img-box1"></div> <!--This div has a set width for the image-->
+                <div class="box1"> <!--ADD FLEX-->
+                    <a href="product-livingroom.html"><div class="img-box1"></div></a><!--This div has a set width for the image-->
                     <div class="text-box1"><!--This div has width for text to live inside of it-->
                         <h2>Living Room</h2>
                         <p>Find your living room essentials here!</p>
+                        <div class="btn">
+                            <a class="product-btn" href="product-livingroom.html">Learn More</a>
+                        </div>
                     </div><!--This div has width for text to live inside of it-->
                 </div>
 
                 <div class="box2">
-                    <div class="img-box2"></div> <!--This div has a set width for the image-->
+                    <a href="product-bedroom.html"><div class="img-box2"></div></a> <!--This div has a set width for the image-->
                     <div class="text-box2"><!--This div has width for text to live inside of it-->
                         <h2>Bedroom</h2>
-                        <p>From night stands to canopy beds, you can find your beloved piece.</p>
+                        <p>Find your beloved piece for your bedroom.</p>
+                        <div class="btn">
+                            <a class="product-btn" href="product-bedroom.html">Learn More</a>
+                        </div>
                     </div><!--This div has width for text to live inside of it-->
 
                 </div>  
 
                 <div class="box3">
-                    <div class="img-box3"></div> <!--This div has a set width for the image-->
+                   <a href="product-diningroom.html"><div class="img-box3"></div></a><!--This div has a set width for the image-->
                     <div class="text-box3"><!--This div has width for text to live inside of it-->
                         <h2>Dining Room</h2>
                         <p>Custom made furniture made for your aesthetic.</p>
+                        <div class="btn">
+                            <a class="product-btn"  href="product-diningroom.html">Learn More</a>
+                        </div>
                     </div><!--This div has width for text to live inside of it-->   
                 </div>
 
